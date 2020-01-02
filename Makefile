@@ -13,16 +13,26 @@ run-game: install
 
 # custom scripts for development --------------------------------------------
 
-
+board:
+	cd board && npm start
+.PHONY: board
 
 snake:
 	python starter-snake-python/app/main.py
-
 .PHONY: snake
+
+engine:
+	engine server
+.PHONY: engine
 
 dev-run: run-game
 	open "http://localhost:3000/?engine=http%3A%2F%2Flocalhost%3A3005&game=$(GAME_ID)"
 .PHONY: dev-mode
+
+# custom scripts for development --------------------------------------------
+
+
+# --------------------------------UNUSED SCRIPTS --------------------------------------------
 
 # test:
 # 	go test -timeout 20s -race -coverprofile coverage.txt -covermode=atomic ./...
