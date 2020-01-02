@@ -1,0 +1,11 @@
+{
+    "width": 20,
+    "height": 20,
+    "food": 10,
+    "snakes": [
+      {
+        "name": "gary",
+        "url": "http://localhost:8080"
+      }
+    ]
+  }
